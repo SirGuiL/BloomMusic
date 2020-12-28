@@ -1,0 +1,140 @@
+:root{
+  --primary: #a202ff;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+  body {
+    background-color: var(--primary);
+    font-family: Roboto, Arial, sans-serif;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: white;
+  }
+  
+  form {
+    margin: 100px 0;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    animation-name: formMove;
+    animation-duration: .5s;
+  }
+  
+  form .input-block:nth-child(1) {
+    margin-bottom: 20px;
+    animation: inputMove .5s backwards;
+    animation-delay: .15s;
+  }
+  form .input-block:nth-child(2) {
+    margin-bottom: 20px;
+    animation: inputMove .5s backwards;
+    animation-delay: .20s;
+  }
+  
+  form .input-block label {
+    font-size: 14px;
+    color: darkslateblue;
+  }
+  
+  form .input-block input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: var(--primary);
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: var(--primary);
+  }
+  
+  form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    animation: inputMove .5s backwards;
+    animation-delay: .35s;
+    outline: none;
+  }
+  form .btn-login:hover {
+    cursor: pointer;
+  }
+  .form-hide{
+    animation: FormFadeOut 1.4s forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  form.error{
+    animation: denied .3s linear, formMove paused;
+    animation-iteration-count: 2;
+  }
+
+/* Aparição suave do formulário */
+
+@keyframes inputMove{
+  from{
+    opacity: 0;
+    transform: translateX(-36%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes formMove{
+  from{
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes FormFadeOut{
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(100vh);
+  }
+}
+@keyframes denied{
+  0%{
+    transform: translateX(0);
+  }
+  35%{
+    transform: translateX(-15%);
+  }
+  75%{
+    transform: translateX(15%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

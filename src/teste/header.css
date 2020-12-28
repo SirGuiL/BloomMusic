@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=warp');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+.header{
+    /* background: #c000da; */
+    padding: 20px 20px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+.logo{
+    line-height: 80px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 48px;
+    color: #ffffff;
+}
+.header ul{
+    float: right;
+    margin-right: 80px;
+}
+
+.header ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+.header ul li a{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    transition: .3s;
+}
+.header ul li a:hover{
+    background: #860097;
+}
+.checkbtn{
+    font-size: 35px;
+    color: #ffffff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+#check{
+    display: none;
+}
+.active{
+    color: #860097;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 834px){
+    .logo{
+        font-size: 38px;
+        margin-left: 20px;
+    }
+    .header ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .3s;
+    }
+    .header ul li{
+        display: block;
+        margin-top: 20px;
+    }
+    .header ul li a{
+        font-size: 30px;
+    }
+    .header ul li a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    .checkbtn{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+@media screen and (max-height: 480px){
+    .header ul li{
+        margin-top: 0;
+    }
+}

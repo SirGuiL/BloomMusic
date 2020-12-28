@@ -1,0 +1,133 @@
+/* .about{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #450057;
+}
+.box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #000;
+    border-radius: 15px;
+}
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: .5s;
+}
+.box:hover img{
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+} */
+
+
+
+.about{
+    position: relative;
+    width: 100%;
+    background: url(../images/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: #ffffff;
+    padding: 100px;
+}
+.about h1{
+    font-weight: 900;
+}
+.about p{
+    font-size: 20px;
+}
+.about .box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.699);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    max-width: 80%;
+    height: 400px;
+}
+.about .box .btn{
+    border-radius: 8px;
+    width: 150px;
+    height: 40px;
+    margin-top: 40px;
+    border: none;
+    background: #cc00ff;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+.about .box .btn:hover{
+    background: #a202ff;
+    letter-spacing: 4px;
+    width: 160px;
+}
+.none{
+    display: none;
+}
+@media screen and (max-width: 676px){
+    .about p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 423px){
+    .about p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 384px){
+    .about p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 324px){
+    .about p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 295px){
+    .about p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 229px){
+    .about p{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 209px){
+    .about h1{
+        font-size: 25px;
+    }
+}
